@@ -1,0 +1,50 @@
+
+## Flasky Project Planning
+
+### Phases :
+
+#### 1. Planification – Terminée
+- Analyse des besoins du projet
+- Définition des fonctionnalités principales
+- Choix des technologies (Flask, base de données, etc.)
+- Organisation des tâches et création d’un plan de travail
+
+
+
+#### 2. Tests – À venir
+- Tests unitaires pour chaque fonctionnalité
+- Tests d’intégration
+- Vérification des performances
+- Correction des bugs détectés
+
+
+
+#### 3. CI/CD – À venir
+- Mise en place d’un pipeline CI/CD
+- Automatisation des tests
+- Automatisation du déploiement
+- Utilisation d’outils comme GitHub Actions ou GitLab CI
+
+
+
+#### 4. Docker – À venir
+- Création d’un Dockerfile pour l’application
+- Configuration de docker-compose
+- Test du fonctionnement en environnement conteneurisé
+- Optimisation de l’image Docker
+
+
+
+#### 5. Monitoring – À venir
+- Mise en place d’outils de monitoring
+- Suivi des performances (CPU, RAM, temps de réponse)
+- Gestion des logs
+- Mise en place d’alertes en cas de problème
+
+---
+
+### Description :
+Ce document décrit de manière détaillée les différentes étapes du projet Flasky.
+ Après avoir terminé la phase de planification, le projet passe aux étapes techniques incluant les tests
+, l’intégration continue, la conteneurisation avec Docker et le monitoring.
+ Chaque phase est essentielle pour garantir la qualité, la stabilité et la performance de l’application finale.

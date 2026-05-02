@@ -28,21 +28,25 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    # تغييرة: استعمل SQLite بدل PostgreSQL
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
 
 
 class TestingConfig(Config):
     TESTING = True
+    # تغييرة: استعمل SQLite بدل PostgreSQL
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') or \
-        'sqlite://'
+        'sqlite:///:memory:'
     WTF_CSRF_ENABLED = False
 
 
 class ProductionConfig(Config):
+    # تغييرة: استعمل SQLite بدل PostgreSQL
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-    SERVER_NAME = os.environ['SERVER_NAME']  # configure the domain name in use
+    # تم إزالة SERVER_NAME للتطوير المحلي
+    # SERVER_NAME = os.environ['SERVER_NAME']
 
     @classmethod
     def init_app(cls, app):
