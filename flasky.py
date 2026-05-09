@@ -1,4 +1,5 @@
 import os
+import flask_monitoringdashboard as dashboard
 from dotenv import load_dotenv
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
@@ -19,7 +20,7 @@ from app.models import User, Follow, Role, Permission, Post, Comment
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 migrate = Migrate(app, db)
-
+dashboard.bind(app)
 
 @app.shell_context_processor
 def make_shell_context():

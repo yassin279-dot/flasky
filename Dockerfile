@@ -7,6 +7,7 @@ RUN pip install -r requirements/docker.txt
 
 COPY app app
 COPY migrations migrations
+COPY tests tests
 COPY flasky.py config.py ./
 
 ENV FLASK_APP=flasky.py
